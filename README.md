@@ -1,89 +1,85 @@
-
 # eslint-config-rn-ts-prettier
 
-Shareable ESLint config for **React Native** projects using **TypeScript** and **Prettier**.
+[![npm version](https://img.shields.io/npm/v/eslint-config-rn-ts-prettier.svg)](https://www.npmjs.com/package/eslint-config-rn-ts-prettier)
+[![npm downloads](https://img.shields.io/npm/dm/eslint-config-rn-ts-prettier.svg)](https://www.npmjs.com/package/eslint-config-rn-ts-prettier)
+[![License: MIT](https://img.shields.io/github/license/darshan09200/eslint-config-rn-ts-prettier?color=green)](./LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/darshan09200/eslint-config-rn-ts-prettier/pulls)
 
-## Features
+:sparkles: **Shareable ESLint config for React Native projects using TypeScript and Prettier.**  
 
-- Airbnb, React, and Prettier best practices
-- TypeScript & React Native accessibility support
-- Sorted, unused, and specific imports (with `simple-import-sort`, `unused-imports`, and `lodash-specific-import`)
-- **Configurable internal package import grouping** (see below)
-
----
-
-## Installation
-
-1. **Install the config and all peer dependencies:**
-
-  ```bash
-  npm install --save-dev eslint-config-rn-ts-prettier
-  ```
-
-> You will also need to install all required peer dependencies as listed in `package.json` (such as `eslint`, `prettier`, `eslint-plugin-react`, etc.).
-
-2. **Extend the config in your ESLint configuration file (`.eslintrc.js`):**
-
-   ```js
-   module.exports = {
-     extends: ['rn-ts-prettier'],
-   };
-   ```
+**Strict, modern, and focused on fast, readable code.**
 
 ---
 
-## Customizing Internal Package Import Order
+## ✨ Features
 
-By default, this config does **not** set a specific order for your internal packages (like `components`, `screens`, etc.) in import sorting.
-**You are encouraged to customize the order for your project.**
-
-### How to Override Internal Import Order
-
-1. **In your project's `.eslintrc.js`, override the `simple-import-sort/imports` rule and specify your internal groups:**
-
-   ```js
-   module.exports = {
-     extends: ['rn-ts-prettier'],
-     rules: {
-       'simple-import-sort/imports': [
-         'error',
-         {
-           groups: [
-             // Side effect imports.
-             ['^\\u0000'],
-             // Packages.
-             ['^react', '^@?\\w'],
-             // Your internal packages (edit as needed!)
-             ['^(screens|components|utils|hooks)(/.*)?$'],
-             // Parent imports. Put `..` last.
-             ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
-             // Other relative imports. Put same-folder imports and `.` last.
-             ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
-           ],
-         },
-       ],
-     },
-   };
-   ```
-
-   > **Tip:** Update the `['^(screens|components|utils|hooks)(/.*)?$']` group with the exact folder names used in your project, in your desired order.
+* Airbnb, React, and Prettier code style out of the box
+* TypeScript and React Native accessibility support
+* Sorted imports, unused import removal, and lodash import hygiene
+* Developer-friendly and easy to extend
 
 ---
 
-## Example `.eslintrc.js`
+## 📦 Installation
+
+```bash
+npm install --save-dev eslint-config-rn-ts-prettier \
+  eslint prettier \
+  eslint-config-airbnb eslint-config-prettier \
+  eslint-plugin-prettier eslint-plugin-react \
+  eslint-plugin-react-native-a11y eslint-plugin-import \
+  eslint-plugin-simple-import-sort eslint-plugin-unused-imports \
+  eslint-plugin-jest eslint-plugin-react-hooks \
+  eslint-plugin-lodash-specific-import \
+  @typescript-eslint/eslint-plugin @typescript-eslint/parser \
+  @babel/eslint-parser
+````
+
+or with **Yarn**:
+
+```bash
+yarn add --dev eslint-config-rn-ts-prettier \
+  eslint prettier \
+  eslint-config-airbnb eslint-config-prettier \
+  eslint-plugin-prettier eslint-plugin-react \
+  eslint-plugin-react-native-a11y eslint-plugin-import \
+  eslint-plugin-simple-import-sort eslint-plugin-unused-imports \
+  eslint-plugin-jest eslint-plugin-react-hooks \
+  eslint-plugin-lodash-specific-import \
+  @typescript-eslint/eslint-plugin @typescript-eslint/parser \
+  @babel/eslint-parser
+```
+
+---
+
+## 🚀 Usage
+
+Add to your ESLint config (e.g., `.eslintrc.js`):
+
+```js
+module.exports = {
+  extends: ['rn-ts-prettier'],
+};
+```
+
+---
+
+## 🛠️ Customizing Internal Import Order
+
+This config does **not** enforce a specific internal import order for your folders like `components`, `screens`, or `utils`.
+**To customize your order, override the `simple-import-sort/imports` rule:**
 
 ```js
 module.exports = {
   extends: ['rn-ts-prettier'],
   rules: {
-    // Customize your internal import order here
     'simple-import-sort/imports': [
       'error',
       {
         groups: [
           ['^\\u0000'],
           ['^react', '^@?\\w'],
-          ['^(screens|components|utils|hooks)(/.*)?$'],
+          ['^(screens|components|utils|hooks)(/.*)?$'], // Customize as needed!
           ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
           ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
         ],
@@ -95,16 +91,36 @@ module.exports = {
 
 ---
 
-## Why customize this?
+## 📝 Example
 
-Different projects organize their code with different internal folder names and conventions. By letting you override the internal import sorting group, you keep your codebase’s imports clean and in a logical order—**your way.**
+A minimal `.eslintrc.js` for React Native + TypeScript:
+
+```js
+module.exports = {
+  extends: ['rn-ts-prettier'],
+  rules: {
+    // Customize rules as needed
+  },
+};
+```
 
 ---
 
-## Questions?
+## 🙌 Contributing
 
-If you need help or want to suggest improvements, please open an issue or PR!
+Contributions, issues, and PRs are welcome!
+Feel free to [open an issue](https://github.com/darshan09200/eslint-config-rn-ts-prettier/issues) or [submit a PR](https://github.com/darshan09200/eslint-config-rn-ts-prettier/pulls).
 
 ---
 
-*Happy coding!*
+## 📄 License
+
+MIT
+
+---
+
+## 💡 Author
+
+[Darshan Jain](https://github.com/darshan09200)
+
+---
