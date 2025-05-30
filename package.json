@@ -1,0 +1,37 @@
+{
+  "name": "eslint-config-rn-ts-prettier",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "Shareable ESLint config for React Native + TypeScript + Prettier.",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "react-native",
+    "typescript",
+    "prettier"
+  ],
+  "dependencies": {
+    "eslint-config-airbnb": "^19.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.0.0",
+    "eslint-plugin-react-native-a11y": "^3.0.0",
+    "eslint-plugin-import": "^2.0.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "eslint-plugin-jest": "^27.0.0",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "eslint-plugin-lodash-specific-import": "^1.0.1",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "@babel/eslint-parser": "^7.0.0"
+  },
+  "peerDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^2.0.0"
+  }
+}
