@@ -11,27 +11,30 @@
     "prettier"
   ],
   "dependencies": {
-    "eslint-config-airbnb": "^19.0.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.0",
-    "eslint-plugin-react": "^7.0.0",
-    "eslint-plugin-react-native-a11y": "^3.0.0",
-    "eslint-plugin-import": "^2.0.0",
-    "eslint-plugin-simple-import-sort": "^10.0.0",
-    "eslint-plugin-unused-imports": "^3.0.0",
-    "eslint-plugin-jest": "^27.0.0",
-    "eslint-plugin-react-hooks": "^4.0.0",
-    "eslint-plugin-lodash-specific-import": "^1.0.1",
+    "@babel/eslint-parser": "^7.0.0",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^7.0.0",
-    "@babel/eslint-parser": "^7.0.0"
+    "eslint-config-airbnb": "^19.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.0.0",
+    "eslint-plugin-jest": "^27.0.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-lodash-specific-import": "^1.0.1",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.0.0",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "eslint-plugin-react-native-a11y": "^3.5.1",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-unused-imports": "^3.0.0"
   },
   "peerDependencies": {
     "eslint": "^8.0.0",
-    "prettier": "^2.0.0"
+    "prettier": "^2.0.0",
+    "typescript": "5.1.5"
   },
   "devDependencies": {
     "eslint": "^8.0.0",
-    "prettier": "^2.0.0"
+    "prettier": "^2.0.0",
+    "typescript": "5.1.5"
   }
 }
