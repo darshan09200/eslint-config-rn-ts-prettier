@@ -14,6 +14,7 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:react-native-a11y/all',
     'plugin:prettier/recommended',
+    'plugin:tailwindcss/recommended',
   ],
   overrides: [
     {
@@ -234,6 +235,27 @@ module.exports = {
     // Can uncomment this if we want to sort keys within objects too.
     // 'sort-keys-fix/sort-keys-fix': 'warn',
     'sort-vars': 'warn',
+    'tailwindcss/no-custom-classname': [
+      'error',
+      { classRegex: '^(class(Name)?|[a-zA-Z0-9]+ClassName)$' },
+    ],
+    'tailwindcss/enforces-negative-arbitrary-values': [
+      'error',
+      { classRegex: '^(class(Name)?|[a-zA-Z0-9]+ClassName)$' },
+    ],
+    'tailwindcss/enforces-shorthand': 'off', // This rule is set to 'off' because it can be too restrictive in some cases. There are also reports of it misbehaving: https://github.com/francoismassart/eslint-plugin-tailwindcss/issues/349
+    'tailwindcss/no-unnecessary-arbitrary-value': [
+      'error',
+      { classRegex: '^(class(Name)?|[a-zA-Z0-9]+ClassName)$' },
+    ],
+    'tailwindcss/no-contradicting-classname': [
+      'error',
+      { classRegex: '^(class(Name)?|[a-zA-Z0-9]+ClassName)$' },
+    ],
+    'tailwindcss/no-arbitrary-value': [
+      'warn',
+      { classRegex: '^(class(Name)?|[a-zA-Z0-9]+ClassName)$' },
+    ],
     'no-promise-executor-return': 'off',
     'lodash-specific-import/no-global': 'warn',
   },
