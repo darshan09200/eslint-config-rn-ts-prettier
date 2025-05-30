@@ -10,6 +10,9 @@
     "typescript",
     "prettier"
   ],
+  "scripts": {
+    "test": "jest"
+  },
   "dependencies": {
     "@babel/eslint-parser": "^7.0.0",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
@@ -38,7 +41,13 @@
     "prettier": "^2.0.0",
     "typescript": "5.1.5"
   },
-  "scripts": {
-    "test": "jest"
-  }
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/darshan09200/eslint-config-rn-ts-prettier.git"
+  },
+  "bugs": {
+    "url": "https://github.com/darshan09200/eslint-config-rn-ts-prettier/issues"
+  },
+  "homepage": "https://github.com/darshan09200/eslint-config-rn-ts-prettier#readme"
 }
