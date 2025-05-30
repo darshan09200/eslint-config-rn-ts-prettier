@@ -23,31 +23,13 @@
 ## 📦 Installation
 
 ```bash
-npm install --save-dev eslint-config-rn-ts-prettier \
-  eslint prettier \
-  eslint-config-airbnb eslint-config-prettier \
-  eslint-plugin-prettier eslint-plugin-react \
-  eslint-plugin-react-native-a11y eslint-plugin-import \
-  eslint-plugin-simple-import-sort eslint-plugin-unused-imports \
-  eslint-plugin-jest eslint-plugin-react-hooks \
-  eslint-plugin-lodash-specific-import \
-  @typescript-eslint/eslint-plugin @typescript-eslint/parser \
-  @babel/eslint-parser
+npm install --save-dev eslint-config-rn-ts-prettier eslint prettier typescript
 ````
 
 or with **Yarn**:
 
 ```bash
-yarn add --dev eslint-config-rn-ts-prettier \
-  eslint prettier \
-  eslint-config-airbnb eslint-config-prettier \
-  eslint-plugin-prettier eslint-plugin-react \
-  eslint-plugin-react-native-a11y eslint-plugin-import \
-  eslint-plugin-simple-import-sort eslint-plugin-unused-imports \
-  eslint-plugin-jest eslint-plugin-react-hooks \
-  eslint-plugin-lodash-specific-import \
-  @typescript-eslint/eslint-plugin @typescript-eslint/parser \
-  @babel/eslint-parser
+yarn add --dev eslint-config-rn-ts-prettier eslint prettier typescript
 ```
 
 ---
